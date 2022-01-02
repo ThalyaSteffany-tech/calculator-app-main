@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;800&display=swap');
+/*font-family: 'Spartan', sans-serif;*/
+* {
+    /*RESET*/
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+
+    /*BACKGROUNDS*/
+    --main-background:   hsl(222, 26%, 31%);
+    --toggle-keypad-background:  hsl(223, 31%, 20%);
+    --screen-background:  hsl(224, 36%, 15%);
+
+    /*KEYS*/
+    --key-background-blue: hsl(225, 21%, 49%);
+    --key-shadow-blue: hsl(224, 28%, 35%);
+
+    --key-background-toggle-red:  hsl(6, 63%, 50%);
+    --key-shadow-orange: hsl(28, 16%, 65%);
+
+    /*TEXT*/
+    --dark-grayish-blue: hsl(221, 14%, 31%);
+    --white: hsl(0, 0, 100%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-background);
+    margin-top: 5rem;
+}
+.calculadora {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 4rem;
+}
+
+.cabecalho__titulo {
+    color: #fff;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    position: absolute;
+    left: 161px;
+    top: -35px;
+}
+.telaCalculadora {
+    background-color: var(--screen-background);
+    width: 50%;
+    height: 6.5rem;
+    border-radius: 4px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: .5rem;
+
+}
+.telaCalculadora__exibirValor {
+    color: #fff;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+    position: absolute;
+    right: 1.3rem;
+}
+.painelCalculadora {
+    width: 50%;
+    background-color:var(--toggle-keypad-background);
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.calculadora__tecla {
+    width: 22%;
+    margin-left: .65rem;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-family: 'Spartan',sans-serif;
+    font-weight: 600;
+    color: var(--dark-grayish-blue);
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 4px;   
+    border: none;
+    box-shadow: 2px 3px 1px var(--key-shadow-blue);
+}
+.resetIgualBotao {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.calculadora__tecla--reset {
+    width: 45%;
+}
+.calculadora__tecla.btnAzul {
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: var(--key-background-blue);
+    color: white;
+    font-weight: 600;
+
+}
+.calculadora__tecla--igual {
+    background-color: red;
+    color: #fff;
+    width: 45%;
+}
